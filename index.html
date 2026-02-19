@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizon Apex Drive</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="hud">
+      <div class="card title-card">
+        <h1>Horizon Apex Drive</h1>
+        <p>Forza-inspired open-road fantasy demo • ultra-smooth 3D • day/night cycle</p>
+      </div>
+
+      <div class="card stats-card">
+        <div><span>Driver</span><strong id="driverName">Astra Vega</strong></div>
+        <div><span>Speed</span><strong id="speedValue">000 km/h</strong></div>
+        <div><span>Nitro</span><strong id="nitroValue">100%</strong></div>
+        <div><span>Session Left</span><strong id="sessionValue">02:00:00</strong></div>
+      </div>
+
+      <div class="card controls-card">
+        <label for="driverSelect">Character</label>
+        <select id="driverSelect">
+          <option value="Astra Vega">Astra Vega</option>
+          <option value="Kairo Flux">Kairo Flux</option>
+          <option value="Nova Dray">Nova Dray</option>
+          <option value="Ryder Quinn">Ryder Quinn</option>
+        </select>
+        <small>W accelerate • S brake • A/D steer • Shift nitro</small>
+      </div>
+    </div>
+
+    <div id="gameContainer"></div>
+
+    <div id="safetyOverlay" class="overlay hidden">
+      <div class="card modal">
+        <h2>Safety Pause Reached</h2>
+        <p>Your 2-hour driving session is complete. Start a new safe session to continue.</p>
+        <button id="restartBtn">Start New 2-Hour Session</button>
+      </div>
+    </div>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
